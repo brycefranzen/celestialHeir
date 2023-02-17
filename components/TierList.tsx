@@ -21,6 +21,7 @@ export const TierList = ({ teamName }: { teamName: string }) => {
   const [phoneAFriend, setPhoneAFriend] = useState(false);
   const [pollAudience, setPollAudience] = useState(false);
   const [fiftyFifty, setFiftyFifty] = useState(false);
+  const [doubleDip, setDoubleDip] = useState(false);
   const [isPollAudienceVisible, setPollAudienceVisible] = useState(false);
 
   const handleClick = (index: number) => {
@@ -83,6 +84,9 @@ export const TierList = ({ teamName }: { teamName: string }) => {
               fill="#FFFFFF"
             />
           </svg>
+        </button>
+        <button onClick={() => setDoubleDip(true)} disabled={!!doubleDip}>
+          x2
         </button>
       </section>
       <section className={styles.tiers}>
