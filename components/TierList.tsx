@@ -30,6 +30,8 @@ export const TierList = ({ teamName }: { teamName: string }) => {
 
   return (
     <article className={styles.tierList}>
+      <h2>{teamName}</h2>
+
       <section className={styles.lifelines}>
         <button onClick={() => setFiftyFifty(true)} disabled={!!fiftyFifty}>
           50:50
@@ -106,7 +108,6 @@ export const TierList = ({ teamName }: { teamName: string }) => {
           ))
           .reverse()}
       </section>
-      <h2>{teamName}</h2>
 
       {isPollAudienceVisible && (
         <div className={styles.pollAudienceModal}>

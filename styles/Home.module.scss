@@ -2,15 +2,15 @@
   background-image: url('../public/stage_img_dark.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
 
   .contentWrapper {
-    z-index: 2;
-    max-width: 1200px;
+    max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
     height: 100vh;
-    padding: 0 50px;
+    padding: 100px 0;
+    text-align: center;
 
     h1 {
       padding-top: 100px;
@@ -22,10 +22,16 @@
       font-weight: 800;
     }
 
+    .logo {
+      margin: 20px auto 50px;
+      transform: rotate(-5deg);
+    }
+
     .tiers {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 100px;
+      grid-template-columns: auto 1fr 1fr 1fr;
+      column-gap: 30px;
+      align-items: center;
     }
   }
 }
