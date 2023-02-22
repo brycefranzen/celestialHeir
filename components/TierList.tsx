@@ -16,7 +16,7 @@ const tiers = [
   'Celestial Heir',
 ];
 
-export const TierList = ({ teamName }: { teamName: string }) => {
+export const TierList = () => {
   const [currentSelection, setCurrentSelection] = useState(0);
   const [phoneAFriend, setPhoneAFriend] = useState(false);
   const [pollAudience, setPollAudience] = useState(false);
@@ -30,7 +30,7 @@ export const TierList = ({ teamName }: { teamName: string }) => {
 
   return (
     <article className={styles.tierList}>
-      <h2>{teamName}</h2>
+      <h2 contentEditable={true}>{`{team name}`}</h2>
 
       <section className={styles.lifelines}>
         <button onClick={() => setFiftyFifty(true)} disabled={!!fiftyFifty}>

@@ -18,9 +18,9 @@ export default function Home() {
         <div className={styles.contentWrapper}>
           <section className={styles.tiers}>
             <Image className={styles.logo} src={logo} alt="logo" width={350} />
-            <TierList teamName="Team 1" />
-            <TierList teamName="Team 2" />
-            <TierList teamName="Team 3" />
+            <TierList />
+            <TierList />
+            <TierList />
           </section>
         </div>
       </main>
