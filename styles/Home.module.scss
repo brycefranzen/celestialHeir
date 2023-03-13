@@ -3,6 +3,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
+  max-height: 100vh;
+  overflow: hidden;
 
   .contentWrapper {
     max-width: 1500px;
@@ -25,6 +27,8 @@
     .logo {
       margin: 20px auto 50px;
       transform: rotate(-5deg);
+      transition: all 1s ease;
+      cursor: pointer;
     }
 
     .tiers {
@@ -32,6 +36,24 @@
       grid-template-columns: auto 1fr 1fr 1fr;
       column-gap: 30px;
       align-items: center;
+      position: relative;
+      transition: all 1s ease;
+
+      article {
+        width: auto;
+        opacity: 1;
+        transition: width 1s ease;
+      }
+
+      &:not(.playing) {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+
+        article {
+          width: 0;
+          opacity: 0;
+        }
+      }
     }
   }
 }

@@ -33,10 +33,16 @@ export const TierList = () => {
       <h2 contentEditable={true}>{`{team name}`}</h2>
 
       <section className={styles.lifelines}>
-        <button onClick={() => setFiftyFifty(true)} disabled={!!fiftyFifty}>
+        <button
+          onClick={() => setFiftyFifty(!fiftyFifty)}
+          className={cn({ [styles.used]: fiftyFifty })}
+        >
           50:50
         </button>
-        <button onClick={() => setPhoneAFriend(true)} disabled={!!phoneAFriend}>
+        <button
+          onClick={() => setPhoneAFriend(!phoneAFriend)}
+          className={cn({ [styles.used]: phoneAFriend })}
+        >
           <svg
             width="25"
             height="25"
@@ -51,8 +57,8 @@ export const TierList = () => {
           </svg>
         </button>
         <button
-          onClick={() => setPollAudienceVisible(true)}
-          disabled={!!pollAudience}
+          onClick={() => setPollAudienceVisible(!pollAudience)}
+          className={cn({ [styles.used]: pollAudience })}
         >
           <svg
             width="25"
@@ -87,7 +93,10 @@ export const TierList = () => {
             />
           </svg>
         </button>
-        <button onClick={() => setDoubleDip(true)} disabled={!!doubleDip}>
+        <button
+          onClick={() => setDoubleDip(!doubleDip)}
+          className={cn({ [styles.used]: doubleDip })}
+        >
           x2
         </button>
       </section>
