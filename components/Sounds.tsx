@@ -37,7 +37,6 @@ export const Sounds = ({ hidden }: { hidden: boolean }) => {
         } else {
           audioElement?.pause();
           audioElement.currentTime = 0;
-          currentPlayer = audioElement;
         }
 
         currentPlayer = audioElement;
