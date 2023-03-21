@@ -28,9 +28,9 @@ export default function Home() {
               width={playing ? 350 : 800}
               onClick={() => setPlaying(!playing)}
             />
-            <TierList />
-            <TierList />
-            <TierList />
+            <TierList name="Team 1" />
+            <TierList name="Team 2" />
+            <TierList name="Team 3" />
           </section>
         </div>
       </main>
