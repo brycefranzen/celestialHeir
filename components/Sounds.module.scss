@@ -1,0 +1,16 @@
+.seekbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 15px;
+  border-radius: 0;
+
+  &::-webkit-progress-bar {
+    background: transparent;
+  }
+
+  &::-webkit-progress-value {
+    background: blue;
+    transition: all 1s ease;
+  }
+}

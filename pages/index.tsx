@@ -6,6 +6,7 @@ import styles from '~/styles/Home.module.scss';
 import { TierList } from '~/components/TierList';
 import logo from '~/public/logo.png';
 import { useState } from 'react';
+import { Sounds } from '~/components/Sounds';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -33,6 +34,7 @@ export default function Home() {
           </section>
         </div>
       </main>
+      <Sounds hidden={!playing} />
     </>
   );
 }
